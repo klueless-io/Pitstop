@@ -6,5 +6,6 @@ namespace CustomerManagement.Api.Models.Models
 
   public partial class Customer
   {
+    // You can write custom methods for Customer in this file.
   }
 }

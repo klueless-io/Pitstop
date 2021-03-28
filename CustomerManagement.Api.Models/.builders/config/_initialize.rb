@@ -11,7 +11,7 @@ Handlebars::Helpers.configure do |config|
 end
 
 target_root       = '~/dev/csharp/Pitstop/CustomerManagement.Api.Models'
-templates_root    = '~/dev/kgems/k_dsl/_/.template'
+templates_root    = '~/dev/templates/klue-templates'
 
 KBuilder.configure do |config|
   config.target_folders.add(:app, target_root)
