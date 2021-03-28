@@ -1,7 +1,7 @@
 # Goal (Build out all the files for P06, and then do P02)
 require 'config/_'
 
-run = 00
+run = 40
 
 # puts JSON.pretty_generate(cfg.to_h)
 # puts JSON.pretty_generate(opts.to_h)
