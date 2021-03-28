@@ -22,8 +22,13 @@ opinion_initialize_secret                   if run == 15
 # Documentation files
 structure_docs                              if run == 30
 
-structure_models                            if run == 40
-structure_context                           if run == 40 # Entity framework context files
+if run == 40
+  structure_models                            
+  structure_context                         # Entity framework context files
+
+  builder.rc('dotnet ef migrations add Initial --context MsDbContext') if opts.app[:support_mssql]
+  builder.rc('dotnet ef migrations add Initial --context PgDbContext') if opts.app[:support_pgsql]
+end
 
   # .add_file('person.rb',
   #   template_file: 'model.rb',
