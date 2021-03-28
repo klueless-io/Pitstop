@@ -5,5 +5,6 @@
 
   public partial class DomainContext : DbContext
   {
+    public DbSet<Customer> Customers { get; set; }
   }
 }

@@ -1,4 +1,4 @@
-﻿namespace CustomerManagement.Api.Models.Context
+﻿namespace CustomerManagement.Api.Context
 {
   using Microsoft.EntityFrameworkCore;
 
