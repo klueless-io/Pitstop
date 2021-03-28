@@ -1,4 +1,4 @@
-namespace CustomerManagement.Api.Models.Models
+namespace CustomerManagement.Api.Models
 {
   using System.Collections.Generic;
   using System.ComponentModel.DataAnnotations.Schema;
