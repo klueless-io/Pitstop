@@ -21,5 +21,8 @@ namespace CustomerManagement.Api.Models.Models
     public string TelephoneNumber { get; set; }
 
     public string EmailAddress { get; set; }
+
+
+
   }
 }
