@@ -14,11 +14,11 @@ require 'config/_'
 # builder.cd(:audit_log).add_file('abc.txt').cd(:solution).add_file('readme.md')
 # builder.add_file('abc.txt', folder_key: :audit_log).cd(:solution).add_file('readme.md')
 
-run = 2
+run = 99
 
-builder.rc('dotnet new sln')            if run == 0
-refresh_project_list_methods            if run == 1
-new_projects(active_projects)           if run == 2
+builder.rc('dotnet new sln')            if run == 1
+refresh_project_list_methods            if run == 10
+new_projects(active_projects)           if run == 11
 # new_project_builders(active_projects)   if run == 3
 
 #   # file = builder
