@@ -14,7 +14,7 @@ require 'config/_'
 # builder.cd(:audit_log).add_file('abc.txt').cd(:solution).add_file('readme.md')
 # builder.add_file('abc.txt', folder_key: :audit_log).cd(:solution).add_file('readme.md')
 
-run = 1
+run = 2
 
 builder.rc('dotnet new sln')            if run == 0
 refresh_project_list_methods            if run == 1
