@@ -1,5 +1,7 @@
 namespace CustomerManagement.Api.Models.Models
 {
+  // Warning: This file is generated, do not manually update
+
   using System;
   using System.Collections.Generic;
 

@@ -12,9 +12,9 @@ end
 
 def structure_context
   puts 'database context'
-  builder.add_file('Context/DbMsContext.cs'    , template_file: 'Context/DbMsContext.cs', app: opts.app) if opts.app[:support_mssql]
-  builder.add_file('Context/DbPgContext.cs'    , template_file: 'Context/DbPgContext.cs', app: opts.app) if opts.app[:support_pgsql]
-  builder.add_file('Context/DomainContext.cs'  , template_file: 'Context/DomainContext.cs', app: opts.app, entities: opts.entities)
+  builder.add_file('Context/MsDbContext.cs'           , template_file: 'Context/MsDbContext.cs', app: opts.app) if opts.app[:support_mssql]
+  builder.add_file('Context/PgDbContext.cs'           , template_file: 'Context/PgDbContext.cs', app: opts.app) if opts.app[:support_pgsql]
+  builder.add_file('Context/DomainContext.cs'         , template_file: 'Context/DomainContext.cs', app: opts.app, entities: opts.entities)
 end
 
 def structure_models

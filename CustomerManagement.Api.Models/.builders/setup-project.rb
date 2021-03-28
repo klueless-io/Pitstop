@@ -1,9 +1,9 @@
 # Goal (Build out all the files for P06, and then do P02)
 require 'config/_'
 
-run = 40
+run = 42
 
-# puts JSON.pretty_generate(cfg.to_h)
+puts JSON.pretty_generate(cfg.to_h)
 # puts JSON.pretty_generate(opts.to_h)
 
 #  Manually add this to project, todo: Support XML file updates so this can be automated
@@ -25,9 +25,16 @@ structure_docs                              if run == 30
 if run == 40
   structure_models                            
   structure_context                         # Entity framework context files
+end
 
+if run == 41
   builder.rc('dotnet ef migrations add Initial --context MsDbContext') if opts.app[:support_mssql]
   builder.rc('dotnet ef migrations add Initial --context PgDbContext') if opts.app[:support_pgsql]
+end
+
+if run == 42
+  builder.rc('dotnet ef database update --context MsDbContext') if opts.app[:support_mssql]
+  builder.rc('dotnet ef database update --context PgDbContext') if opts.app[:support_pgsql]
 end
 
   # .add_file('person.rb',
