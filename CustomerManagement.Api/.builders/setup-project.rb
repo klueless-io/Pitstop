@@ -28,9 +28,7 @@ builder.add_file('.gitignore', template_file: '.gitignore')
 
 structure_models                            if run == 35
 
-if run == 40
-  structure_context                         # Entity framework context files
-end
+structure_ef_context                        if run == 40
 
 if run == 41
   builder.rc('dotnet ef migrations add Initial --context MsDbContext') if opts.app[:support_mssql]
