@@ -1,11 +1,10 @@
 ﻿namespace CustomerManagement.Api.Models.Context
 {
-  using Microsoft.EntityFrameworkCore;
-  using CustomerManagement.Api.Models.Models;
+    using CustomerManagement.Api.Models.Models;
+    using Microsoft.EntityFrameworkCore;
 
-  public class DomainContext : DbContext
-  {
-    public DbSet<Customer> Customers { get; set; }
-
-  }
+    public class DomainContext : DbContext
+    {
+        public DbSet<Customer> Customers { get; set; }
+    }
 }
