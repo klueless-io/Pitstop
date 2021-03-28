@@ -10,11 +10,12 @@ def structure_docs
     .add_file('docs/USAGE.md'                         , template_file: 'docs/USAGE.md')
 end
 
-def structure_context
+def structure_ef_context
   puts 'database context'
   builder.add_file('Context/MsDbContext.cs'           , template_file: 'Context/MsDbContext.cs', app: opts.app) if opts.app[:support_mssql]
   builder.add_file('Context/PgDbContext.cs'           , template_file: 'Context/PgDbContext.cs', app: opts.app) if opts.app[:support_pgsql]
   builder.add_file('Context/DomainContext.cs'         , template_file: 'Context/DomainContext.cs', app: opts.app, entities: opts.entities)
+  builder.add_file('Context/DomainContext.designer.cs', template_file: 'Context/DomainContext.designer.cs', app: opts.app, entities: opts.entities)
 end
 
 def structure_models
