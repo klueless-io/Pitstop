@@ -4,7 +4,7 @@ def app
   return @app if defined? @app
   @app = begin
     app = {
-      application_namespaces: ['P08MvcBasic']
+      application_namespaces: ['Pitstop']
     }
     app[:application_namespace] = app[:application_namespaces].join('.')
     app
