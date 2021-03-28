@@ -24,6 +24,8 @@ opinion_initialize_secret                   if run == 15
 # Documentation files
 structure_docs                              if run == 30
 
+builder.add_file('.gitignore', template_file: '.gitignore')
+
 structure_models                            if run == 35
 
 if run == 40
